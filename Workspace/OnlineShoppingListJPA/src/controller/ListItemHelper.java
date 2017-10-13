@@ -9,7 +9,7 @@ import model.ListItem;
 
 public class ListItemHelper
 {
-	static EntityManagerFactory emfactory = Persistence.createEntityManagerFactory("ShoppingListwithJPA");
+	static EntityManagerFactory emfactory = Persistence.createEntityManagerFactory("OnlineShoppingListJPA");
 	public void cleanUp()
 	{
 		emfactory.close();

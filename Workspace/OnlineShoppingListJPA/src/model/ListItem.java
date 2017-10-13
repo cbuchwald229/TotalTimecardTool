@@ -10,7 +10,7 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "items")
+@Table(name = "Items")
 public class ListItem
 {
 	@Id
@@ -26,10 +26,10 @@ public class ListItem
 	{
 	}
 	
-	public ListItem(String s, String i)
+	public ListItem(String store, String item)
 	{
-		this.store = s;
-		this.item = i;
+		this.store = store;
+		this.item = item;
 	}
 	
 	public int getId()
@@ -63,7 +63,8 @@ public class ListItem
 	}
 
 	@Override
-	public String toString() {
-		return "ListItem [id=" + id + ", store=" + store + ", item=" + item + "]";
+	public String toString()
+	{
+		return this.store + " --- " + this.item;
 	}
 }
