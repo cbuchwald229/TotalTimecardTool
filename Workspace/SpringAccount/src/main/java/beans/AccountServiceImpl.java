@@ -1,5 +1,6 @@
 package beans;
 
+
 public class AccountServiceImpl implements AccountService
 {
 	private AccountDao accountDao;
