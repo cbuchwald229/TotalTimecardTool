@@ -16,6 +16,15 @@ public class AccountDaoInMemoryImpl implements AccountDao
 		accountsMap.put(account2.getId(), account2);
 	}
 	
+	public Map<Long, Account> getAccountsMap()
+	{
+		return accountsMap;
+	}
+	public void setAccountsMap(Map<Long, Account> accountsMap)
+	{
+		this.accountsMap = accountsMap;
+	}
+	
 	public void insert(Account account)
 	{
 		accountsMap.put(account.getId(), account);
@@ -56,7 +65,7 @@ public class AccountDaoInMemoryImpl implements AccountDao
 	
 	public List<Account>find(String ownerName)
 	{
-		List<Account>accounts = new ArrayList<Account>();
+		List<Account> accounts = new ArrayList<Account>();
 		for(Account account: accountsMap.values())
 		{
 			if(ownerName.equals(account.getOwnerName()))

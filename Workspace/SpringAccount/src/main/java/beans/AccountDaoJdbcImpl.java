@@ -7,54 +7,47 @@ import java.util.Map;
 
 public class AccountDaoJdbcImpl implements AccountDao
 {
-	private Map<Long, Account> accountsMap = new HashMap<Long, Account>();
+	public void insert(Account account)
 	{
-		Account account1 = new Account(1L, "John", 10);
-		Account account2 = new Account(2L, "Mary", 20);
-		
-		accountsMap.put(account1.getId(), account1);
-		accountsMap.put(account2.getId(), account2);
+		// TODO Auto-generated method stub
 	}
-	
-	public void insert(Account account){}
-	public void update(Account account){}
-	public void update(List<Account>accounts){}
-	public void delete(long accountId){}
-	public Account find(long accountId)
+
+	public void update(Account account)
 	{
-		return accountsMap.get(accountId);
+		// TODO Auto-generated method stub			
 	}
-	public List<Account>find(List<Long>accountIds)
+
+	public void update(List<Account> accounts) 
 	{
-		List<Account> accounts = new ArrayList<Account>();
-		for(Long id: accountIds)
-		{
-			accounts.add(accountsMap.get(id));
-		}
-		return accounts;
+		// TODO Auto-generated method stub		
 	}
-	public List<Account>find(String ownerName)
+
+	public void delete(long accountId) 
 	{
-		List<Account>accounts = new ArrayList<Account>();
-		for(Account account: accountsMap.values())
-		{
-			if(ownerName.equals(account.getOwnerName()))
-			{
-				accounts.add(account);
-			}
-		}
-		return accounts;
+		// TODO Auto-generated method stub				
 	}
-	public List<Account>find(boolean locked)
+
+	public Account find(long accountId) 
 	{
-		List<Account>accounts = new ArrayList<Account>();
-		for(Account account: accountsMap.values())
-		{
-			if(locked == (account.isLocked()))
-			{
-				accounts.add(account);
-			}
-		}
-		return accounts;
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	public List<Account> find(List<Long> accountIds) 
+	{
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	public List<Account> find(String ownerName) 
+	{
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	public List<Account> find(boolean locked) 
+	{
+		// TODO Auto-generated method stub
+		return null;
 	}
 }

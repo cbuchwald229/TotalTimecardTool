@@ -9,7 +9,7 @@ public interface AccountDao
 	public void update(List<Account>accounts);
 	public void delete(long accountId);
 	public Account find(long accountId);
-	public List<Account>find(List<Long>accountIds);
-	public List<Account>find(String ownerName);
-	public List<Account>find(boolean locked);
+	public List<Account> find(List<Long> accountIds);
+	public List<Account> find(String ownerName);
+	public List<Account> find(boolean locked);
 }

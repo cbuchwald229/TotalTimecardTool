@@ -1,5 +1,6 @@
 package beans;
 
+import org.springframework.beans.factory.annotation.Autowire;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
@@ -13,15 +14,16 @@ public class BeanConfiguration
 		return bean;
 	}
 	
-	@Bean
+	@Bean(autowire=Autowire.BY_NAME)
 	public AccountService accountService()
 	{
+		//AccountServiceImpl bean = new AccountServiceImpl();
 		AccountServiceImpl bean = new AccountServiceImpl(accountDao());
 		//bean.setAccountDao(accountDao());
 		return bean;
 	}
 	
-	@Bean
+	@Bean(autowire=Autowire.BY_NAME)
 	public AccountDao accountDaoJdbc()
 	{
 		AccountDaoJdbcImpl bean = new AccountDaoJdbcImpl();
